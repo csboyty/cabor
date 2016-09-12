@@ -1,0 +1,22 @@
+.size(@width; @height){
+  width:@width;
+  height: @height;
+}
+.fontSize(@size){
+  font-size:unit(@size,px);
+  font-size:unit((@size / 10),rem);
+}
+.fontSize0(){
+  font-size:0;
+}
+.blockCenter(){
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+}
+.corner(@size){
+  border-radius: @size;
+}
+.borderBox(){
+  box-sizing: border-box;
+}

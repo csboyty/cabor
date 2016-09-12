@@ -1,0 +1,82 @@
+@import "var";
+@import "mixin/common";
+
+.list{
+   .fontSize0();
+  margin: 50px 0px;
+
+  .item{
+    width: 47%;
+    position: relative;
+
+    &:first-child{
+      margin-right: 6%;
+    }
+
+    .thumb{
+      .size(100%;auto);
+      display: block;
+    }
+
+    .info{
+      position: absolute;
+      bottom:0px;
+      left:0px;
+      .size(100%;@btnHeight);
+      line-height: @btnHeight;
+      .fontSize(@fontSizeBase);
+      background: @blueBase;
+      opacity: .6;
+      color: @whiteBase;
+      text-align: center;
+      margin: 0px;
+    }
+  }
+
+}
+.list1{
+  .fontSize0();
+  margin: 50px 0px;
+
+  .item{
+    width: 32%;
+    margin-right: 2%;
+    .fontSize(@fontSizeBase);
+    color: @blueBase;
+
+    a{
+      color: @blueBase;
+    }
+
+    .thumb{
+      .size(100%;auto);
+      display: block;
+    }
+
+    .info{
+      background: @gray;
+      padding: 10px 10px 20px 10px;
+    }
+
+    .title{
+      margin-bottom: 15px;
+    }
+
+    p{
+      margin: 5px 0px;
+    }
+
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+
+  .childList{
+    padding-left: 20px;
+
+    .childItem{
+      list-style: disc;
+      display: list-item;
+    }
+  }
+}

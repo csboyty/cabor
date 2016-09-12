@@ -1,0 +1,21 @@
+@import "../var";
+@import "../mixin/common";
+
+.footer {
+  background: @grayBase;
+  padding:20px @contentPadding;
+
+  .info {
+    .blockCenter();
+    .borderBox();
+    background: url("@{imagePath}/footer_logo.png") no-repeat;
+    padding-left: 165px;
+
+
+    .text {
+      .fontSize(@fontSizeBase);
+      color: @whiteBase;
+      margin: 5px 0px;
+    }
+  }
+}

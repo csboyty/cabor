@@ -1,0 +1,36 @@
+@import "../var";
+@import "../mixin/common";
+
+.header {
+  padding:30px @contentPadding 20px @contentPadding;
+  .blockCenter();
+  position: relative;
+
+  .tel {
+    background: url("@{imagePath}/tel.png") no-repeat;
+    position: absolute;
+    right:@contentPadding;
+    top:0px;
+    .size(288px; 30px);
+    .fontSize0();
+  }
+
+  .fuwu {
+    background: url("@{imagePath}/fuwu.png") no-repeat;
+    position: absolute;
+    right:@contentPadding;
+    bottom:20px;
+    .size(440px; 60px);
+    .fontSize0();
+  }
+}
+
+.logo{
+
+  a{
+    display: block;
+    background: url("@{imagePath}/logo.png") no-repeat;
+    .size(204px; 98px);
+    .fontSize0();
+  }
+}

@@ -1,0 +1,31 @@
+@import "../var";
+@import "../mixin/common";
+
+.nav{
+  background: url("@{imagePath}/nav.png") repeat-x @grayBase;
+  padding:0px @contentPadding;
+}
+.menu {
+   height:42px;
+  .blockCenter();
+  .fontSize0();
+  text-align: left;
+
+  .item {
+    background: url("@{imagePath}/nav_line.png") center right no-repeat;
+    padding:10px 15px;
+    &:first-child{
+      padding-left: 0px;
+    }
+
+    .link {
+      .fontSize(@fontSizeLarge);
+      color:@menuItemColor;
+
+      &:hover{
+        color:@menuItemColorHover;
+        border-bottom: 1px solid @menuItemColorHover;
+      }
+    }
+  }
+}
