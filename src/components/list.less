@@ -1,6 +1,9 @@
 @import "var";
 @import "mixin/common";
 
+/**
+* 风格选择，一行两个
+*/
 .list{
    .fontSize0();
   margin: 50px 0px;
@@ -34,6 +37,10 @@
   }
 
 }
+
+/**
+* 系列选择，形状选择，一行三个
+*/
 .list1{
   .fontSize0();
   margin: 50px 0px;
@@ -43,6 +50,7 @@
     margin-right: 2%;
     .fontSize(@fontSizeBase);
     color: @blueBase;
+    vertical-align: top;
 
     a{
       color: @blueBase;
@@ -77,6 +85,35 @@
     .childItem{
       list-style: disc;
       display: list-item;
+    }
+  }
+}
+/**
+* 继承list1
+*/
+.list101{
+
+}
+.list101 .item{
+  width: 15%;
+  margin-right: 2%;
+}
+
+/**
+*付款方式
+*/
+.list2{
+  text-align: center;
+
+  .item{
+
+    .check{
+      vertical-align: middle;
+    }
+
+    .thumb{
+      width: 200px;
+      vertical-align: middle;
     }
   }
 }

@@ -1,0 +1,104 @@
+@import "../../components/var";
+@import "../../components/mixin/common";
+
+.shape{
+
+  .fixedLeft{
+    position: fixed;
+    width: abs(4%-@contentPadding);
+    right:100%-@contentPadding+2%;
+    top:195px;
+
+    .img{
+      .size(100%;auto);
+    }
+
+    .caption{
+      text-align: center;
+      margin: 5px 0px;
+      .fontSize(@fontSizeBase);
+      color: @gray;
+    }
+  }
+
+  .fixedRight{
+    position: fixed;
+    width: abs(4%-@contentPadding);
+    left:100%-@contentPadding+2%;
+    top:195px;
+    background: @grayLight;
+    color: @blueBase;
+    .fontSize(@fontSizeBase);
+    padding:5px 10px 15px 10px;
+    box-sizing: border-box;
+
+    p{
+      margin: 5px 0px;
+
+      &:last-child{
+        .fontSize(@fontSizeLarge);
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.main{
+    background: @whiteBase;
+  }
+
+  .section{
+    margin: 30px 0px;
+
+    .hasTBBorder{
+      border-bottom: 1px solid @gray;
+      border-top:1px solid @gray;
+    }
+
+    .totalM{
+      .fontSize(@fontSizeLarge);
+      color: @gray;
+      text-align: center;
+
+      .totalMValue{
+        border-bottom: 1px solid @gray;
+        display: inline-block;
+        width: 40px;
+      }
+    }
+
+    .ulTip{
+      margin:5px 40px;
+      .fontSize(@fontSizeBase);
+      text-align: left;
+    }
+  }
+
+
+  .list1{
+    margin: 20px 0px;
+
+    .item{
+      text-align: center;
+
+      .thumb{
+        margin: 5px 0px;
+      }
+    }
+  }
+}
+.custom{
+
+  .section{
+
+    .btn{
+      margin-right: 10px;
+    }
+
+    .ulTip{
+      display: inline-block;
+      .fontSize(@fontSizeLarge);
+      color: @blueBase;
+    }
+  }
+
+}

@@ -1,0 +1,35 @@
+@import "../../components/var";
+@import "../../components/mixin/common";
+
+.order{
+
+  .section{
+    padding: 20px 20px 20px 40px;
+    color: @blueBase;
+    .fontSize(@fontSizeBase);
+    border-bottom: 1px solid @gray;
+    position: relative;
+
+    .title{
+      font-weight: bold;
+      .fontSize(@fontSizeBase);
+    }
+
+    .text{
+      margin: 5px 0px;
+    }
+
+    .total{
+      .fontSize(@fontSizeSmall);
+      position: absolute;
+      right:20px;
+      top:20px;
+    }
+
+    .allTotal{
+      text-align: right;
+      .fontSize(@fontSizeLarge);
+      margin: 10px 0px;
+    }
+  }
+}
