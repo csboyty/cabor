@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="import" href="/components/meta/meta.html?__inline">
+    <link rel="import" href="../../components/meta/meta.html?__inline">
     <title>嘉宝在线模块化定制平台|选择形状</title>
     <link type="text/css" rel="stylesheet" href="../../static/css/common.less">
     <link type="text/css" rel="stylesheet" href="shape.less">
+
+
+    <script data-main="pages/shape/shapeIndex.js" src="../../static/js/require.js"></script>
 </head>
 <body>
 
-<link rel="import" href="/components/header/header.html?__inline">
-<link rel="import" href="/components/menu/menu.html?__inline">
+<link rel="import" href="../../components/header/header.html?__inline">
+<link rel="import" href="../../components/menu/menu.html?__inline">
 
 <div class="main shape">
 
     <div class="fixedLeft">
-        <img class="img" src="img/langmanshouer/effect.jpg">
+        <img class="img" src="img/langManShouEr/effect.jpg">
         <p class="caption">参考图片</p>
     </div>
     <div class="fixedRight">
         <p class="tCenter">您的选择</p>
-        <p>风格：现代</p>
-        <p>系列：浪漫首尔</p>
-        <p>形状：一字型</p>
-        <p>套米数：3.5米</p>
+        <p>风格：<span id="selectStyle"></span></p>
+        <p>系列：<span id="selectSeries"></span></p>
+        <p>形状：<span id="selectShape"></span></p>
+        <p>套米数：<span id="selectTotalM">0</span>米</p>
         <br>
-        <p>标准配置费：20000元</p>
+        <p>标准配置费：<span class="selectTotalMoney">0</span>元</p>
         <p>个性配置费：0元</p>
         <br>
-        <p>共计：20000元</p>
+        <p>共计：<span class="selectTotalMoney">0</span>元</p>
     </div>
 
     <div class="pageTitle">
         3、选择你的橱柜形状
     </div>
     <div class="section hasTBBorder">
-        <ul class="list1">
+        <ul class="list1" id="shape">
             <li class="item">
                 <img class="thumb" src="img/shape1.jpg">
-                <input type="radio" name="shape" value="1">
+                <input type="radio" name="shape" value="一字型">
                 一字型
             </li>
             <li class="item">
                 <img class="thumb" src="img/shape2.jpg">
-                <input type="radio" name="shape" value="2">
+                <input type="radio" name="shape" value="L字型">
                 L字型
             </li>
             <li class="item">
                 <img class="thumb" src="img/shape3.jpg">
-                <input type="radio" name="shape" value="3">
+                <input type="radio" name="shape" value="U字型">
                 U字型
             </li>
         </ul>
@@ -56,11 +59,11 @@
         4、填写你的橱柜尺寸
     </div>
     <div class="section hasTBBorder">
-        <ul class="list1">
-            <li class="item" >
+        <ul class="list1" id="size">
+            <li class="item">
                 柜长&nbsp;<input type="text">
             </li>
-            <li class="item" >
+            <li class="item">
                 柜宽&nbsp;<input type="text">
             </li>
             <li class="item" >
@@ -74,129 +77,77 @@
     </div>
     <div class="section">
         <div>
+            <script type="text/template" id="menXingTpl">
+                {@each list as item ,index}
+                <li class="item">
+                    <img class="thumb" src="${item.image}">
+                    <input type="radio" name="menXing" value="${item.name}">
+                    ${item.name}
+                </li>
+                {@/each}
+            </script>
+
             <p class="ulTip">可选门型</p>
-            <ul class="list1 list101">
+            <ul class="list1 list101" id="menXingList">
 
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/menXing1.jpg">
-                    <input type="radio" name="menXing" value="1">
-                    平板直角
-                </li>
             </ul>
         </div>
 
         <div>
+            <script type="text/template" id="menSeTpl">
+                {@each list as item ,index}
+                <li class="item">
+                    <img class="thumb" src="${item.image}">
+                    <input type="radio" name="menSe" value="${item.name}">
+                    ${item.name}
+                </li>
+                {@/each}
+            </script>
+
             <p class="ulTip">可选门板花色</p>
-            <ul class="list1 list101">
+            <ul class="list1 list101" id="menSeList">
 
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/menSe1.jpg">
-                    <input type="radio" name="menSe" value="1">
-                    12-09纯白
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/menSe2.jpg">
-                    <input type="radio" name="menSe" value="2">
-                    12-33奶咖啡
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/menSe3.jpg">
-                    <input type="radio" name="menSe" value="3">
-                    12-45黑色
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/menSe4.jpg">
-                    <input type="radio" name="menSe" value="4">
-                    12-47宝蓝
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/menSe5.jpg">
-                    <input type="radio" name="menSe" value="5">
-                    12-79枣红
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/menSe6.jpg">
-                    <input type="radio" name="menSe" value="6">
-                    12-85果绿
-                </li>
             </ul>
         </div>
         <div>
+            <script type="text/template" id="taiSeTpl">
+                {@each list as item ,index}
+                <li class="item">
+                    <img class="thumb" src="${item.image}">
+                    <input type="radio" name="taiSe" value="${item.name}">
+                    ${item.name}
+                </li>
+                {@/each}
+            </script>
+
             <p class="ulTip">可选台面花色</p>
-            <ul class="list1 list101">
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/taiSe1.jpg">
-                    <input type="radio" name="tarSe" value="1">
-                    TZG-101银钻白
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/taiSe2.jpg">
-                    <input type="radio" name="taiSe" value="2">
-                    TZG-102亚麻白
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/taiSe3.jpg">
-                    <input type="radio" name="taiSe" value="3">
-                    TZG-104白玉无瑕
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/taiSe4.jpg">
-                    <input type="radio" name="taiSe" value="4">
-                    TZG-105金星钻
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/taiSe5.jpg">
-                    <input type="radio" name="taiSe" value="5">
-                    TZG-106印尼灰
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/taiSe6.jpg">
-                    <input type="radio" name="taiSe" value="6">
-                    TZG-108玉米黄
-                </li>
+            <ul class="list1 list101"  id="taiSeList">
+
             </ul>
         </div>
         <div>
+            <script type="text/template" id="laShouTpl">
+                {@each list as item ,index}
+                <li class="item">
+                    <img class="thumb" src="${item.image}">
+                    <input type="radio" name="laShou" value="${item.name}/${item.pitch}/${item.grade}">
+                    ${item.name}<br>
+                    ${item.pitch}&nbsp;${item.grade}
+                </li>
+                {@/each}
+            </script>
+
             <p class="ulTip">可选拉手型号</p>
-            <ul class="list1 list101">
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/laShou1.jpg">
-                    <input type="radio" name="laShou" value="1">
-                    1085亚光<br>
-                    孔距：150&nbsp;C级
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/laShou2.jpg">
-                    <input type="radio" name="laShou" value="1">
-                    1158亚光<br>
-                    孔距：160&nbsp;C级
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/laShou3.jpg">
-                    <input type="radio" name="laShou" value="1">
-                    1159亚光<br>
-                    孔距：150&nbsp;C级
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/laShou4.jpg">
-                    <input type="radio" name="laShou" value="1">
-                    1251亮铬<br>
-                    孔距：160&nbsp;C级
-                </li>
-                <li class="item">
-                    <img class="thumb" src="img/langmanshouer/laShou5.jpg">
-                    <input type="radio" name="laShou" value="1">
-                    1720亮铬<br>
-                    孔距：192&nbsp;C级
-                </li>
+            <ul class="list1 list101" id="laShouList">
+
             </ul>
         </div>
 
     </div>
-    <a class="btn fRight" href="order.html">定制完成</a>
-    <a class="btn fRight" style="margin-right: 20px" href="custom.html">增加个性定制</a>
+    <a class="btn fRight nextStep" href="order.html">定制完成</a>
+    <a class="btn fRight nextStep" style="margin-right: 20px" href="custom.html">增加个性定制</a>
 </div>
-<link rel="import" href="/components/footer/footer.html?__inline">
+<link rel="import" href="../../components/footer/footer.html?__inline">
 
 </body>
 </html>

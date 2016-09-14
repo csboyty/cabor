@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="import" href="/components/meta/meta.html?__inline">
+    <link rel="import" href="../../components/meta/meta.html?__inline">
     <title>嘉宝在线模块化定制平台|选择风格</title>
     <link type="text/css" rel="stylesheet" href="../../static/css/common.less">
     <link type="text/css" rel="stylesheet" href="order.less">
+
+    <script data-main="pages/order/orderIndex.js" src="../../static/js/require.js"></script>
 </head>
 <body>
 
 <script type="text/template" id="tpl"></script>
 
-<link rel="import" href="/components/header/header.html?__inline">
-<link rel="import" href="/components/menu/menu.html?__inline">
+<link rel="import" href="../../components/header/header.html?__inline">
+<link rel="import" href="../../components/menu/menu.html?__inline">
 <div class="main order">
     <div class="pageTitle">
         6、确认订单
     </div>
 
     <div id="info">
-        <div class="section">
-            <h5 class="title">基本信息</h5>
-            <p class="text">风格：现代</p>
-            <p class="text">系列：浪漫首尔</p>
-            <p class="text">形式：一字型</p>
-            <p class="text">套米数：3.5米</p>
+        <div class="section" id="baseInfo">
+            <script type="text/template" id="baseInfoTpl">
+                <h5 class="title">基本信息</h5>
+                <p class="text">风格：${style}</p>
+                <p class="text">系列：${series}</p>
+                <p class="text">形式：${shape}</p>
+                <p class="text">套米数：${totalM}米</p>
+            </script>
+        </div>
+
+        <div class="section" id="normalInfo">
+            <script type="text/template" id="normalInfoTpl">
+                <span class="total">标准配置费用:${totalMoney}元</span>
+                <h5 class="title">标准配置信息</h5>
+                <p class="text">门型：${menXing}</p>
+                <p class="text">门板颜色：${menSe}</p>
+                <p class="text">台面颜色：${taiSe}</p>
+                <p class="text">拉手：${laShou}</p>
+            </script>
+        </div>
+
+        <div class="section" id="customInfo">
+            <script type="text/template" id="customInfoTpl">
+                <span class="total">个性配置费用:${totalMoney}元</span>
+                <h5 class="title">个性配置信息</h5>
+                <p class="text">台面：${taiMian}</p>
+                <p class="text">上翻支撑：${shangFan}</p>
+            </script>
         </div>
         <div class="section">
-            <span class="total">标准配置费用:20000元</span>
-            <h5 class="title">基本信息</h5>
-            <p class="text">风格：现代</p>
-            <p class="text">系列：浪漫首尔</p>
-            <p class="text">形式：一字型</p>
-            <p class="text">套米数：3.5米</p>
-        </div>
-        <div class="section">
-            <span class="total">个性配置费用:20000元</span>
-            <h5 class="title">基本信息</h5>
-            <p class="text">风格：现代</p>
-            <p class="text">系列：浪漫首尔</p>
-            <p class="text">形式：一字型</p>
-            <p class="text">套米数：3.5米</p>
-        </div>
-        <div class="section">
-            <p class="allTotal">费用总计:30000元</p>
+            <p class="allTotal">费用总计:<span id="totalMoney"></span>元</p>
             <p class="text">姓名：<input type="text"></p>
             <p class="text">电话：<input type="text"></p>
             <p class="text">楼盘：<input type="text"></p>
@@ -50,7 +58,7 @@
     </div>
     <a class="btn fRight" href="pay.html">提交订单</a>
 </div>
-<link rel="import" href="/components/footer/footer.html?__inline">
+<link rel="import" href="../../components/footer/footer.html?__inline">
 
 </body>
 </html>

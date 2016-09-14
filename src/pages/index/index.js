@@ -10,13 +10,15 @@ requirejs.config({
     shim:{
         juicer:{
             exports: 'juicer'
-        }
+        },
+        'jquery.cookie': ['jquery']
     }
 });
 
 // Start the main app logic.
-requirejs(['jquery', "juicer", "app/config"],
+requirejs(['jquery', "juicer", "app/config", "jquery.cookie"],
     function ($, juicer, config) {
-        console.log(juicer);
-        console.log(config.version);
+        //do something here
+        //console.log(config);
+        $.removeCookie("storeInfo");
     });
