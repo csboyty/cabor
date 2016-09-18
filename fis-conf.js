@@ -35,11 +35,11 @@ fis.match("/pages/(*)/*(.html)", {
 /**
  * 发布上线的版本
  */
-fis.project.currentMedia() === 'dist' && fis.util.del(fis.project.getProjectPath('../public'));
+fis.project.currentMedia() === 'dist' && fis.util.del(fis.project.getProjectPath('./public'));
 
 fis.media('dist')
     .match('*.{js,css,less,png,jpg,jpeg,gif,svg}', {
-        useHash: true
+        useHash: false
     })
     .match('*.png', {
         optimizer: fis.plugin('png-compressor')
