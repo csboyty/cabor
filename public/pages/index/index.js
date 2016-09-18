@@ -1,0 +1,1 @@
+requirejs.config({baseUrl:"static/js/lib",paths:{app:"../app"},shim:{juicer:{exports:"juicer"},"jquery.cookie":["jquery"]}}),requirejs(["jquery","juicer","app/config","jquery.cookie"],function(e){e.removeCookie("storeInfo")});

@@ -1,0 +1,1 @@
+define(["jquery","juicer","app/config","jquery.cookie"],function(t,i,e){return{init:function(){var o,r,l,n=location.hash,s=t("#tpl").html();n=n.substr(1),o={style:{value:n}},t.cookie("storeInfo",JSON.stringify(o)),l={list:e.objToArray(e.allData.style[n].series)},r=i(s,l),t("#list").html(r)}}});

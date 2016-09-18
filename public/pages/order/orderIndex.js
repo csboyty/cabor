@@ -1,0 +1,1 @@
+requirejs.config({baseUrl:"static/js/lib",paths:{app:"../app",page:"../../../pages/order"},shim:{juicer:{exports:"juicer"},"jquery.cookie":["jquery"]}}),requirejs(["page/order"],function(e){e.init()});

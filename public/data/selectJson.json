@@ -1,0 +1,20 @@
+{
+    "style":{
+        "value":1,
+        "series":{
+            "value":1,
+            "shape":"一字型",
+            "totalM":3.5,
+            "menXing":1,
+            "menSe":1,
+            "taiSe":1,
+            "laShou":1,
+            "totalMoney":2000
+        }
+    },
+    "custom":{
+        "taiMian":"xxxx",
+        "shangFan":"xxxx",
+        "totalMoney":2000
+    }
+}

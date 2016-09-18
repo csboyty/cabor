@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="webkit" name="renderer">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="keywords" content="xxxx"/>
+    <meta name="description" content="xxxx">
+
+    <title>嘉宝在线模块化定制平台|选择风格</title>
+    <link type="text/css" rel="stylesheet" href="static/css/common.css">
+    <link type="text/css" rel="stylesheet" href="pages/order/order.css">
+
+    <script data-main="pages/order/orderIndex.js" src="static/js/require.js"></script>
+</head>
+<body>
+
+<script type="text/template" id="tpl"></script>
+
+<div class="header">
+    <h1 class="logo">
+        <a href="http://www.siemensgabor.com/">嘉宝橱柜</a>
+    </h1>
+    <p class="tel">电话</p>
+    <p class="fuwu">服务</p>
+</div>
+<div class="nav">
+    <ul class="menu">
+        <li class="item">
+            <a class="link" href="http://www.siemensgabor.com/">首页</a>
+        </li>
+        <li class="item">
+            <a class="link" href="http://www.siemensgabor.com/chugui/">整体橱柜</a>
+        </li>
+        <li class="item">
+            <a class="link" href="http://www.siemensgabor.com/yigui/">整体衣柜</a>
+        </li>
+        <li class="item">
+            <a class="link" href="http://www.siemensgabor.com/men/">木门</a>
+        </li>
+        <li class="item">
+            <a class="link" href="http://www.siemensgabor.com/yuanmu/">原木馆</a>
+        </li>
+        <li class="item">
+            <a class="link" href="http://www.siemensgabor.com/dianqi/">智能美学厨房</a>
+        </li>
+        <li class="item">
+            <a class="link" href="http://www.siemensgabor.com/jiameng/">加盟嘉宝</a>
+        </li>
+        <li class="item">
+            <a class="link" href="http://www.siemensgabor.com/news/">新闻中心</a>
+        </li>
+        <li class="item">
+            <a class="link" href="http://www.siemensgabor.com/about/">关于嘉宝</a>
+        </li>
+    </ul>
+</div>
+
+<div class="main order">
+    <div class="pageTitle">
+        6、确认订单
+    </div>
+
+    <div id="info">
+        <div class="section" id="baseInfo">
+            <script type="text/template" id="baseInfoTpl">
+                <h5 class="title">基本信息</h5>
+                <p class="text">风格：${style}</p>
+                <p class="text">系列：${series}</p>
+                <p class="text">形式：${shape}</p>
+                <p class="text">套米数：${totalM}米</p>
+            </script>
+        </div>
+
+        <div class="section" id="normalInfo">
+            <script type="text/template" id="normalInfoTpl">
+                <span class="total">标准配置费用:${totalMoney}元</span>
+                <h5 class="title">标准配置信息</h5>
+                <p class="text">门型：${menXing}</p>
+                <p class="text">门板颜色：${menSe}</p>
+                <p class="text">台面颜色：${taiSe}</p>
+                <p class="text">拉手：${laShou}</p>
+            </script>
+        </div>
+
+        <div class="section" id="customInfo">
+            <script type="text/template" id="customInfoTpl">
+                <span class="total">个性配置费用:${totalMoney}元</span>
+                <h5 class="title">个性配置信息</h5>
+                <p class="text">台面：${taiMian}</p>
+                <p class="text">上翻支撑：${shangFan}</p>
+            </script>
+        </div>
+        <div class="section">
+            <p class="allTotal">费用总计:<span id="totalMoney"></span>元</p>
+            <p class="text">姓名：<input type="text"></p>
+            <p class="text">电话：<input type="text"></p>
+            <p class="text">楼盘：<input type="text"></p>
+        </div>
+    </div>
+    <a class="btn fRight" href="pay.html">提交订单</a>
+
+    <a class="btn fRight" style="margin-right: 20px" href="index.html">返回首页</a>
+</div>
+<div class="footer">
+    <div class="info">
+        <p class="text">©2014 嘉宝厨柜 版权所有</p>
+        <p class="text">24小时免费咨询热线：400-0188-608</p>
+        <p class="text">湘ICP备12008428号-1</p>
+    </div>
+</div>
+
+</body>
+</html>
