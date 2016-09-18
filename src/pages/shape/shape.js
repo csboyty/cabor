@@ -22,6 +22,7 @@ define(["jquery","juicer", "app/config", "jquery.cookie"],
 
                 $("#selectStyle").text(config.allData.style[style].name);
                 $("#selectSeries").text(config.allData.style[style].series[series].name);
+                $("#effectImage").attr("src",config.allData.style[style].series[series].effectImage);
 
                 data={
                     list:config.objToArray(config.allData.style[style].series[series]["menXing"])

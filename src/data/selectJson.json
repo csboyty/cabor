@@ -13,10 +13,7 @@
         }
     },
     "custom":{
-        "taiMian":{
-            "type":"xxxx",
-            "value":"xxxx"
-        },
+        "taiMian":"xxxx",
         "shangFan":"xxxx",
         "totalMoney":2000
     }
