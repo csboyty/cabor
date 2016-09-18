@@ -109,7 +109,7 @@ define({
                         "config":{
                             "taiMian":"嘉宝专供石英石",
                             "menBan":"极品UV高光板",
-                            "guiTi":"18MM黄枫木",
+                            "guiTi":"18mm经典银灰",
                             "jiaoLian":"库博阻尼"
                         },
                         "effectImage":"pages/shape/img/langManShouEr/effect.jpg",
@@ -208,12 +208,12 @@ define({
                         "value":3,
                         "name":"1872",
                         "image":"pages/series/img/modern3.jpg",
-                        "price":"3000",
+                        "price":"3350",
                         "config":{
                             "taiMian":"嘉宝专供石英石",
-                            "menBan":"双饰面+亚克力",
-                            "guiTi":"18MM黄枫木",
-                            "jiaoLian":"库博阻尼"
+                            "menBan":"极品晶化超级高光板",
+                            "guiTi":"18mm花檀木",
+                            "jiaoLian":"百隆快装阻尼门铰"
                         },
                         "effectImage":"pages/shape/img/1872/effect.jpg",
                         "menXing":[
@@ -663,7 +663,7 @@ define({
         },
         "custom":{
             "taiMian":{
-                "price":2000,
+                "price":1000,
                 "1":{
                     "value":1,
                     "name":"15厚金钻王",

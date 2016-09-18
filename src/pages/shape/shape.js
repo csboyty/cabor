@@ -52,7 +52,7 @@ define(["jquery","juicer", "app/config", "jquery.cookie"],
                 html=juicer(tpl,data);
                 $("#laShouList").html(html);
 
-                $("#size li").hide();
+                $("#size li").addClass("hidden");
 
             },
 
@@ -94,15 +94,17 @@ define(["jquery","juicer", "app/config", "jquery.cookie"],
                 $("#totalMValue").text("");
                 switch(value){
                     case "一字型":
-                        $("#size li").hide();
-                        $("#size li:eq(0)").show();
+                        $("#size li").addClass("hidden");
+                        $("#size li:eq(0)").removeClass("hidden");
                         break;
                     case "L字型":
-                        $("#size li").show();
-                        $("#size li:eq(2)").hide();
+                        $("#size li").removeClass("hidden");
+                        $("#size li:eq(1)").find("label").text("柜宽");
+                        $("#size li:eq(2)").addClass("hidden");
                         break;
                     case "U字型":
-                        $("#size li").show();
+                        $("#size li").removeClass("hidden");
+                        $("#size li:eq(1)").find("label").text("柜宽A");
                         break;
                 }
 
@@ -115,6 +117,9 @@ define(["jquery","juicer", "app/config", "jquery.cookie"],
                 $("#size input").each(function(index,el){
                     totalM+=Number($(this).val());
                 });
+
+                totalM-=($("#size li:not(.hidden)").length-1)*0.6;
+
                 totalMoney=totalM*Number(config.allData.style[style].series[series].price);
                 $("#selectTotalM").text(totalM);
                 $(".selectTotalMoney").text(totalMoney);
